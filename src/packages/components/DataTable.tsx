@@ -12,7 +12,7 @@ export const DataTable = React.forwardRef<iDataTableInstance, iDataTableProps>((
   const [tableParams, setTableParams] = useState<TableParams>({
     pagination: {
       current: 1,
-      pageSize: 10,
+      pageSize: 3,
       total: 0,
     },
   });
@@ -23,7 +23,9 @@ export const DataTable = React.forwardRef<iDataTableInstance, iDataTableProps>((
       {
         title: '#',
         width: '60px',
-        render: (_, __, index) => ((tableParams.pagination!.current! - 1) * tableParams.pagination!.pageSize!) + (index + 1)
+        render: (_, __, index) => (
+          (tableParams.pagination!.current! - 1) * tableParams.pagination!.pageSize!
+        ) + (index + 1)
       },
       ...props.columns ?? [],
     ];
@@ -43,7 +45,7 @@ export const DataTable = React.forwardRef<iDataTableInstance, iDataTableProps>((
         page: page - 1,
         page_size: pageSize,
       });
-      console.log(resp);
+      console.log('resp', resp);
       setDataSource(resp.data.list);
       setTableParams({ pagination: { current: page, pageSize, total: resp.data.total } });
     } catch (e: any) {
@@ -55,6 +57,7 @@ export const DataTable = React.forwardRef<iDataTableInstance, iDataTableProps>((
   };
 
   const handleTableChange: TableProps<AnyObject>['onChange'] = (pagination) => {
+    console.log('你点击了pagination分页', pagination);
     loadData(pagination.current, pagination.pageSize);
   };
 
@@ -69,7 +72,7 @@ export const DataTable = React.forwardRef<iDataTableInstance, iDataTableProps>((
   useStrictMounted(async () => {
     await loadData();
   });
-
+  console.log('props', props);
   return (
     <Table
       {...props}
@@ -86,6 +89,7 @@ export const DataTable = React.forwardRef<iDataTableInstance, iDataTableProps>((
 interface TableParams {
   pagination?: TablePaginationConfig;
 }
+
 
 export interface iDataTableProps<RecordType = any> extends Omit<TableProps<RecordType>, 'dataSource' | 'onChange'> {
   module: string;

@@ -8,7 +8,7 @@ type MenuItem = Required<MenuProps>['items'][number];
 export const menus: MenuItem[] = [
    {
     key: '/pages/langgraph-pages',
-    label: 'LangGraph',
+    label: 'LangGraph报销流程',
     icon: <MailOutlined/>,
     children: [
       { key: '/pages/langgraph-pages/approve/list', label: '报销列表' },

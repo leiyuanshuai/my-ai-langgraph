@@ -1,0 +1,116 @@
+.resume-detail-page {
+  background-color: #f2f2f2;
+  height: 100vh;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  .resume-detail-page-toolbar {
+    background-color: white;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+
+    & > div:first-child {
+      svg {
+        font-size: 24px;
+        margin-right: 8px;
+      }
+    }
+
+    & > div:last-child {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+
+      & > * {
+        min-width: 88px;
+        margin-left: 0.5em;
+      }
+
+      & > .ant-space-compact {
+        width: auto;
+      }
+    }
+  }
+
+  .resume-detail-page-body {
+    flex: 1;
+    margin-top: 1em;
+    position: relative;
+
+    .resume-detail-page-body-right {
+      width: 800px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: white;
+      overflow-y: auto;
+      border-radius: 8px;
+    }
+
+    .resume-detail-page-body-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: calc(800px + 1em);
+      //background-color: red;
+      overflow-y: auto;
+      border-radius: 8px;
+    }
+  }
+
+  .resume-detail-form {
+    .resume-detail-form-card-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 0.5em;
+    }
+
+    & > div + .resume-detail-form-card-title {
+      margin-top: 1em;
+    }
+
+    .ant-row + .ant-row {
+      margin-top: 1em;
+    }
+
+    .resume-detail-form-card-body {
+      background-color: white;
+      padding: 1em;
+      border-radius: 8px;
+    }
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+
+    .ant-form-item-label {
+      &:after {
+        content: '：';
+      }
+
+      label {
+        min-width: 80px;
+        text-align-last: justify;
+        display: inline-block;
+        line-height: 2.2em;
+
+        &:after {
+          content: none;
+        }
+      }
+    }
+
+    .ant-col {
+      & > .ant-space-compact {
+        width: 100%;
+      }
+    }
+  }
+}

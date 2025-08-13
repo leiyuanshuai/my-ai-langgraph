@@ -1,0 +1,38 @@
+.app-home {
+  --app-menu-szie: 265px;
+
+  &[data-collapse=true] {
+    --app-menu-szie: 80px;
+  }
+
+  .app-home-menus {
+    transition: all ease 300ms;
+    width: var(--app-menu-szie);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    & > .ant-menu {
+      height: 100%;
+      padding-top: 60px;
+    }
+
+    .app-home-menus-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1em;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+    }
+  }
+
+  .app-home-body {
+    width: calc(100% - var(--app-menu-szie));
+    margin-left: var(--app-menu-szie);
+  }
+}

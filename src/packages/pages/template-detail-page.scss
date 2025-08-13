@@ -1,0 +1,19 @@
+.template-detail-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+
+  .template-detail-page-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em;
+    background-color: white;
+    border-radius: 8px;
+    width: 800px;
+    box-sizing: border-box;
+    margin: 1em 0;
+  }
+}

@@ -38,7 +38,7 @@ const columns: ColumnsType<iMessageRecord> = [
       <Space size="middle">
         <Button type="link" onClick={() => {
           router.navigate(`/pages/langgraph-pages/messages/detail?id=${record.id}`);
-        }}>{record.status === 'pending' ? '待审批' : '已审批'}</Button> :
+        }}>{record.status === 'pending' ? '待审批' : '已审批'}</Button>
       </Space>
     ),
   },

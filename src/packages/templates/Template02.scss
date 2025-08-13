@@ -1,0 +1,121 @@
+.resume-template {
+  &.template-02 {
+    padding: 10px;
+    font-size: 13px;
+    color: #333333;
+
+    .template-02-header {
+      background-color: var(--primary);
+      color: white;
+      font-size: 28px;
+      line-height: 1em;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 20px;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, PingFang SC, Hiragino Sans GB, noto sans, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+    }
+
+    .template-02-section-title {
+      margin-top: 15px;
+      font-size: 24px;
+      color: var(--primary);
+      font-weight: 600;
+      padding-left: 20px;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        bottom: 1.5px;
+        left: 20px;
+        right: 0;
+        height: 1px;
+        background-color: var(--primary);
+        content: '';
+        opacity: 0.5;
+      }
+
+      span {
+        display: inline-block;
+        padding-bottom: 10px;
+        border-bottom: solid 4px var(--primary);
+      }
+
+      & + div {
+        margin-top: 15px;
+      }
+    }
+
+    .template-02-basic-info {
+      display: flex;
+      padding-left: 20px;
+
+      .template-02-basic-info-left {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 2em;
+
+        & > div {
+          width: 50%;
+        }
+      }
+
+      .template-02-basic-info-right {
+        img {
+          width: 120px;
+          height: 130px;
+        }
+      }
+    }
+
+    .template-02-section-card-title {
+      padding: 0 10px 10px 20px;
+      display: flex;
+      align-items: flex-end;
+
+      & > span:nth-child(1) {
+        width: 20%;
+        text-align: left;
+      }
+
+      & > span:nth-child(2) {
+        font-size: 1.5em;
+        color: black;
+        font-weight: 600;
+        width: 60%;
+        text-align: center;
+      }
+
+      & > span:nth-child(3) {
+        width: 20%;
+        text-align: right;
+      }
+    }
+
+    .template-02-section-card-row {
+      padding-left: 20px;
+      padding-right: 20px;
+      line-height: 2em;
+
+      &[data-last=true] {
+        //padding-bottom: 20px;
+      }
+
+      &:before {
+        content: '· ';
+        display: inline-block;
+        margin-right: 0.5em;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      & + .template-02-section-card-title {
+        margin-top: 15px;
+      }
+    }
+  }
+}
