@@ -13,6 +13,7 @@ export const menus: MenuItem[] = [
     children: [
       { key: '/pages/langgraph-pages/approve/list', label: '报销列表' },
       { key: '/pages/langgraph-pages/messages/list', label: '消息列表' },
+      { key: '/pages/langgraph-pages/edit-state/edit-state', label: '聊天会话' },
     ]
   },
   // {
