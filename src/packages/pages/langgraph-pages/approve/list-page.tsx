@@ -3,7 +3,7 @@ import {ColumnsType} from "antd/es/table";
 import {iBaseRecord} from "../../../utils/BaseRecord";
 import {Button, Form, Input, Modal, notification, Space} from "antd";
 import {defer} from "@peryl/utils/defer";
-import {http} from "../../../utils/http";
+import {aiHttp as http} from "../../../utils/http";
 import {useRef, useState} from "react";
 
 const STATUS_MAP = {

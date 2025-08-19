@@ -4,7 +4,7 @@ import {Button, Input, notification} from 'antd';
 import {iBaseRecord} from "../../../utils/BaseRecord";
 import ArrowUpOutlined from '@ant-design/icons/ArrowUpOutlined';
 import {LgChatList} from "./LgChatList";
-import {http} from "../../../utils/http";
+import {aiHttp as http} from "../../../utils/http";
 import {uuid} from '@peryl/utils/uuid';
 import {delay} from "@peryl/utils/delay";
 import {LgIcon} from "./LgIcon";

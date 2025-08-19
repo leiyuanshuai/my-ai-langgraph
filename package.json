@@ -2,7 +2,7 @@
   "name": "ai-resume",
   "version": "0.1.0",
   "private": true,
-  "homepage": "ai-resume",
+  "homepage": "my-ai",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -21,6 +21,7 @@
   "scripts": {
     "dev": "react-scripts start",
     "start": "react-scripts start",
+    "ferv": "ferv ./build -b my-ai/",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -2,7 +2,7 @@ import {useQuery} from "../../../uses/useQuery";
 import {useState} from "react";
 import {iMessageRecord} from "./list-page";
 import {useStrictMounted} from "../../../uses/useStrictMounted";
-import {http} from "../../../utils/http";
+import {aiHttp as http} from "../../../utils/http";
 import {Alert, Button, Form, notification, Spin} from "antd";
 import React from "react";
 

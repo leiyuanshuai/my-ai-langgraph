@@ -1,6 +1,6 @@
 import {iChatRecord} from "./edit-state-page";
 import {useState} from "react";
-import {http} from "../../../utils/http";
+import {aiHttp as http} from "../../../utils/http";
 import {Button, notification, Space, Spin} from "antd";
 import {useStrictMounted} from "../../../uses/useStrictMounted";
 import MessageOutlined from '@ant-design/icons/MessageOutlined'

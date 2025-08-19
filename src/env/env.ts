@@ -1,5 +1,8 @@
-export default {
-  baseURL: "http://127.0.0.1:7002",
-  // baseURL: "http://82.157.3.202:7002",
-  assetsPrefix: "http://82.157.3.202",
+const env = {
+  baseURL: process.env.REACT_APP_BASE_URL,
+  resumeBaseURL: process.env.REACT_APP_RESUME_BASE_URL,
+  assetsPrefix: process.env.REACT_APP_ASSETS_PREFIX,
 };
+
+console.log(env);
+export default env;

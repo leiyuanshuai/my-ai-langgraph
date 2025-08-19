@@ -2,7 +2,7 @@ import {notification, Table, TablePaginationConfig} from "antd";
 import {TableProps} from "antd/es/table/InternalTable";
 import {AnyObject} from "antd/es/_util/type";
 import React, {useImperativeHandle, useMemo, useState} from "react";
-import {http} from "../utils/http";
+import {aiHttp as http} from "../utils/http";
 import {useStrictMounted} from "../uses/useStrictMounted";
 import {ColumnsType} from "antd/es/table";
 
